@@ -8,45 +8,39 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="shortcut icon" href="../img/navicon.png" type="image/x-icon">
   <script src="./javascript.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div>
-    <h1 class="title">
-      Etch-A-Sketch
-    </h1>
-
-    <div class="main">
-      <div class="toolskit">
-        <div class="background">
-          <span>Select a background color</span>
-          <input type="color" class="color-picker" value="#ff0000" />
-        </div>
-        <div class="brush">
-          <span>Select a brush color</span>
-          <input type="color" class="color-picker" value="#ff0000" />
-        </div>
-        <div class="solid">
-        </div>
-        <div class="rainbow">
-          <button class="rainbow-button">
-            <span class="rainbow-text">Click me to toggle RAINBOW MODE</span>
-          </button>
-        </div>
-        <div class="size-slider">
-          <span>Select the canvas size</span>
-          <input type="range">
-        </div>
-        <button class="reset">
-          RESET
-        </button>
+  <div class="title">Etch-a-sketch</div>
+  <div class="main">
+    <div class="toolkit">
+      <div class="input-row">
+        <input type="text" id="square-input" placeholder="Squares per side? (>100 === lag)">
+        <button class="square-input-button">Update squares</button>
+        <div class="updated"></div>
       </div>
-
-      <div class="container">
-
+      <div class="fill-row">
+        <button class="fill-button">Select canvas color</button>
+        <input type="color" id="canvas-color-picker">
       </div>
-
-
+      <div class="brush-row">
+        <span>Select a brush color </span>
+        <input type="color" id="brush-color-picker">
+      </div>
+      
+      <div class="rainbow-row">
+        <button class="rainbow-button">Click me for rainbow brush (no selection necessary!)</button>
+        <div class="toggle-row">
+          <!-- <button class="rainbow-switch">TOGGLE RAINBOW ANIMATION</button>
+          <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label> -->
+        </div>
+      </div>
     </div>
+    <div class="container"></div>
   </div>
-</body>
 </html>
